@@ -106,6 +106,18 @@ def print_error(text, fatal=True, exit_code=1):
     if fatal:
         exit(exit_code)
 
+def print_info(text):
+    """
+    Print info message.
+    """
+    print(f"{Cyan}Info:{NC} {text}")
+    
+def print_success(text):
+    """
+    Print success message.
+    """
+    print(f"{Green}Success:{NC} {text}")
+
 def verbose_print(text, color=NC):
     """
     Print text if verbose mode is on.
