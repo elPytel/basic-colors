@@ -1,24 +1,24 @@
-# My colors
+# Basic colors
 
 ## Installation
 You can install the module using pip:
 ```bash
-pip install my-colors
+pip install basic-colors
 ```
 
 ## Usage
-Module `my_colors` provides you with a set of variables that you can use to color your text in terminal.
+Module `basic_colors` provides you with a set of variables that you can use to color your text in terminal.
 
 ### Colored text
 ```python
-from my_colors import *
+from basic_colors import *
 
 print(Blue + "Ahoj" + Reset)
 ```
 
 ### Logging like messages
 ```python
-from my_colors import print_warning, print_error, verbose_print
+from basic_colors import print_warning, print_error, verbose_print
 
 print_warning("This is a warning message.")
 print_error("This is an error message.")

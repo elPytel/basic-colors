@@ -1,4 +1,4 @@
-from my_colors import print_warning, print_error, verbose_print, BRed, BGreen, BYellow, BBlue, BPurple, BCyan, NC, set_verbose, VERBOSE
+from basic_colors import print_warning, print_error, verbose_print, BRed, BGreen, BYellow, BBlue, BPurple, BCyan, NC, set_verbose, VERBOSE
 
 def test_colors():
     print(f'{BRed}C{BGreen}o{BYellow}l{BBlue}o{BPurple}r{BCyan}s{NC} test!')
