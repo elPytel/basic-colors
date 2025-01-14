@@ -80,10 +80,18 @@ On_IWhite = '\033[0;107m'   # White
 
 ERROR = '❌'
 SUCCESS = '✅'
-WARNING = '⚠️'
-INFO = 'ℹ️'
+WARNING = '⚠️ '
+INFO = ' ℹ️'
 
 VERBOSE = True
+ENABLE_ICONS = True
+
+def enable_icons(enable):
+    """
+    Enable or disable icons.
+    """
+    global ENABLE_ICONS
+    ENABLE_ICONS = enable
 
 def set_verbose(verbose):
     """
@@ -92,16 +100,27 @@ def set_verbose(verbose):
     global VERBOSE
     VERBOSE = verbose
 
+def is_verbose_on():
+    """
+    Check if verbose mode is on.
+    """
+    global VERBOSE
+    return VERBOSE
+
 def print_warning(text):
     """
     Print warning message.
     """
+    if ENABLE_ICONS:
+        print(f"{Yellow}{WARNING}{NC}", end=" ")
     print(f"{Yellow}Warning:{NC} {text}")
     
 def print_error(text, fatal=True, exit_code=1):
     """
     Print error message and optionally exit the program with exit code.
     """
+    if ENABLE_ICONS:
+        print(f"{Red}{ERROR}{NC}", end=" ")
     print(f"{Red}Error:{NC} {text}")
     if fatal:
         exit(exit_code)
@@ -110,12 +129,16 @@ def print_info(text):
     """
     Print info message.
     """
+    if ENABLE_ICONS:
+        print(f"{Cyan}{INFO}{NC}", end=" ")
     print(f"{Cyan}Info:{NC} {text}")
     
 def print_success(text):
     """
     Print success message.
     """
+    if ENABLE_ICONS:
+        print(f"{Green}{SUCCESS}{NC}", end=" ")
     print(f"{Green}Success:{NC} {text}")
 
 def verbose_print(text, color=NC):
