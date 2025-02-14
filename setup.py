@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    version='0.1.1',
+    version='0.1.2',
     name='basic-colors',
     py_modules=["basic_colors"],
     author='elPytel',

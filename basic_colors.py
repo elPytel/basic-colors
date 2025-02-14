@@ -4,6 +4,9 @@
 Color codes for terminal.
 """
 
+import sys
+from sys import exit
+
 # Reset
 Color_Off = '\033[0m'       # Text Reset
 NC = '\033[0m'
